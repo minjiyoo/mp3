@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.common.family.GalleryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1"
+        android:id="@+id/linearLayout2">
+        <Button
+            android:id="@+id/home"
+            android:background="@drawable/button_home"
+            android:layout_weight="0.124"
+            android:layout_height="50dp"
+            android:layout_width="0dp" />
+
+        <Button
+            android:id="@+id/board"
+            android:background="@drawable/button_board"
+            android:layout_weight="0.244"
+            android:layout_height="50dp"
+            android:layout_width="0dp"/>
+
+        <Button
+            android:id="@+id/talk"
+            android:background="@drawable/button_talk"
+            android:layout_weight="0.195"
+            android:layout_height="50dp"
+            android:layout_width="0dp"/>
+
+        <Button
+            android:id="@+id/calendar"
+            android:background="@drawable/button_calendar"
+            android:layout_weight="0.244"
+            android:layout_height="50dp"
+            android:layout_width="0dp"/>
+
+        <Button
+            android:id="@+id/setting"
+            android:background="@drawable/button_setting"
+            android:layout_weight="0.194"
+            android:layout_height="50dp"
+            android:layout_width="0dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:id="@+id/boardScroll"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="false" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/ListView" />
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write"
+        android:id="@+id/board_input"
+        android:layout_below="@+id/boardScroll"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="board_input" />
+
+</RelativeLayout>
